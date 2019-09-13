@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand"  [routerLink]="''">KF</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="''">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item" ngbDropdown #myDrop="ngbDropdown">
+            <a class="nav-link" style="cursor: pointer" ngbDropdownToggle id="navbarTop" role="button">
+              Recipes
+            </a>
+            <div ngbDropdownMenu aria-labelledby="navbarTop" class="dropdown-menu dropdown-menu-left">
+              <a class="dropdown-item btn-light" [routerLink]="'recipes/new'">Add Recipe</a>
+              <a class="dropdown-item btn-light" [routerLink]="'recipes'">View Recipes</a>
+            </div> 
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'pantry'">Pantry</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Other</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
