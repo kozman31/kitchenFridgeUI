@@ -9,4 +9,4 @@ RUN npm install && \
 
 FROM nginx:alpine
 
-COPY --from=builder /app/dist/kitchenFridgeUI /usr/share/nginx/html/
+COPY --from=builder /app/dist/kitchenFridgeUI/ /usr/share/nginx/html/
