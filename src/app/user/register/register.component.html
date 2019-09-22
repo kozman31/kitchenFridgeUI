@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="text-center">
+        <h2>Register now</h2>
+        <h5>to save your recipes and track your pantry</h5>
+    </div>
+    <form [formGroup]="registrationForm" (ngSubmit)="submit()">
+        <app-profile-form [profileGroup]="profile"></app-profile-form>
+        <app-password-form [passwordGroup]="password"></app-password-form>
+        <div class="row justify-content-md-center">
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="displayName">
+                        <fa-icon class="small" [icon]="['fas','star-of-life']"></fa-icon> Display Name
+                    </label>
+                    <input type="text" required formControlName="displayName" class="form-control form-control-sm" id="displayName" placeholder="Display Name">
+                </div>
+            </div>
+        </div>
+        <div class="form-group text-center">
+            <button type="submit" [disabled]="!registrationForm.valid" class="btn btn-dark btn-sm m-1">Register</button>
+            <button type="button" (click)="reset()" class="btn btn-dark btn-sm m-1">Reset</button>
+        </div>
+    </form>
+    <div class="text-info small text-center">
+        After registering you will receive an email to activate your account. If you do not activate your account
+        within 48 hours it will be deleted and you will need to register again.
+    </div>
+</div>
